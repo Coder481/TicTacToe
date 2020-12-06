@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive"
+        android:text="Welcome To TicTacToe"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/grid_imageView"
+        android:layout_width="382dp"
+        android:layout_height="453dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="Tic Tac Toe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/grid" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:adjustViewBounds="true"
+        android:tag="0"
+        android:onClick="playerTap"
+        app:layout_constraintStart_toStartOf="@+id/grid_imageView"
+        app:layout_constraintTop_toTopOf="@+id/grid_imageView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="52dp"
+        android:tag="1"
+        android:onClick="playerTap"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/imageView1"
+        app:layout_constraintTop_toTopOf="@+id/grid_imageView" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="24dp"
+        android:adjustViewBounds="true"
+        android:onClick="playerTap"
+        android:tag="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:tag="3"
+        android:onClick="playerTap"
+        app:layout_constraintStart_toStartOf="@+id/grid_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:tag="4"
+        android:onClick="playerTap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:adjustViewBounds="true"
+        android:tag="5"
+        android:onClick="playerTap"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="@+id/grid_imageView"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="56dp"
+        android:tag="8"
+        android:onClick="playerTap"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/grid_imageView" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:adjustViewBounds="true"
+        android:tag="7"
+        android:onClick="playerTap"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="78dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="28dp"
+        android:adjustViewBounds="true"
+        android:tag="6"
+        android:onClick="playerTap"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_imageView"
+        app:layout_constraintStart_toStartOf="@+id/grid_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/grid_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rst_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/reset"
+        android:onClick="gameReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid_imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
